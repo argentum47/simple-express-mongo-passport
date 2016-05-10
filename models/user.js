@@ -11,6 +11,7 @@ const User = new Schema({
   token: { type: String },
   imageUrl: { type: String },
   loggedinAt: { type: Date },
+  location: { type: [Number], index: '2dsphere' },
   facebook: {}
 });
 

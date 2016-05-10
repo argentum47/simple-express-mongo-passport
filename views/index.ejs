@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Date-a-mate</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <% if(user.id) {%>
-      Hello <%= user.name %>
+      <% include partials/_logged_in.ejs %>
     <% } else {%>
       <a href="/auth/facebook">log in with facebook</a>
     <% } %>

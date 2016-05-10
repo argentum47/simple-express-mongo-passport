@@ -31,6 +31,7 @@ module.exports = new FacebookStrategy({
     user.uid = profile.id;
     user.provider = 'facebook';
     user.token = accessToken;
+    user.imageUrl = profile.photos[0].value
     user.email = u ? u.email : email;
     user.loggedinAt = new Date();
     user.facebook = profile._json;
