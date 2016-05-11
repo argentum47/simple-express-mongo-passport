@@ -6,10 +6,13 @@
   </head>
   <body>
     <p>Welcome to <%= title %></p>
-    <% if(user.id) {%>
-      <% include partials/_logged_in.ejs %>
-    <% } else {%>
-      <a href="/auth/facebook">log in with facebook</a>
-    <% } %>
+    <div class="main">
+      <% if(user.id) {%>
+        <% include partials/_logged_in.ejs %>
+      <% } else {%>
+        <a href="/auth/facebook">log in with facebook</a>
+      <% } %>
+    </div>
+    <script src="/javascripts/app.js"></script>
   </body>
 </html>
